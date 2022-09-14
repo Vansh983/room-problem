@@ -13,4 +13,7 @@
   <ItemGroup>
     <Folder Include="Machine\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="RoomProblemApp.csproj" />
+  </ItemGroup>
 </Project>
