@@ -1,11 +1,11 @@
-﻿using Machine.LearnProblem;
+﻿using RoomProblem.Machine.LearningModelInterface;
 using System.Collections.Generic;
 
 namespace RoomProblem
 {
-    class RoomsProblem : LearnProblem
+    class RoomsProblem : LearninngModelInterface
     {
-        private double[][] rewards = new double[6][]
+        private double[][] rewardMatrix = new double[6][]
             {
                 new double[]{-1, -1, -1, -1,  0, -1 },
                 new double[]{-1, -1, -1,  0, -1, 100},
@@ -21,15 +21,15 @@ namespace RoomProblem
 
         public double GetReward(int currentState, int action)
         {
-            return rewards[currentState][action];
+            return rewardMatrix[currentState][action];
         }
 
         public int[] GetActions(int currentState)
         {
             List<int> validActions = new List<int>();
-            for (int i = 0; i < rewards[currentState].Length; i++)
+            for (int i = 0; i < rewardMatrix[currentState].Length; i++)
             {
-                if (rewards[currentState][i] != -1)
+                if (rewardMatrix[currentState][i] != -1)
                     validActions.Add(i);
             }
             return validActions.ToArray();

@@ -1,11 +1,11 @@
 ﻿namespace RoomProblem.Machine
 {
-    public interface LearnProblem
+    public interface LearninngModelInterface
     {
         int NumberStates { get; }
         int NumberActions { get; }
         int[] GetActions(int currentState);
         double GetReward(int currentState, int action);
-        bool GoalStateReached(int currentState);
+        bool IsStateReached(int currentState);
     }
 }
