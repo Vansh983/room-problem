@@ -1,9 +1,9 @@
-﻿using RoomProblem.Machine.LearningModelInterface;
+﻿using RoomProblem.Machine;
 using System.Collections.Generic;
 
 namespace RoomProblem
 {
-    class RoomsProblem : LearninngModelInterface
+    class RoomsProblem : LearningModelInterface
     {
         private double[][] rewardMatrix = new double[6][]
             {
@@ -35,7 +35,7 @@ namespace RoomProblem
             return validActions.ToArray();
         }
 
-        public bool GoalStateReached(int currentState)
+        public bool IsStateReached(int currentState)
         {
             return currentState == 5;
         }
