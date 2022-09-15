@@ -1,0 +1,15 @@
+/Users/vanshsood/Desktop/Work Area/RoomProblem/RoomProblem/bin/Debug/net6.0/RoomProblem
+/Users/vanshsood/Desktop/Work Area/RoomProblem/RoomProblem/bin/Debug/net6.0/RoomProblem.deps.json
+/Users/vanshsood/Desktop/Work Area/RoomProblem/RoomProblem/bin/Debug/net6.0/RoomProblem.runtimeconfig.json
+/Users/vanshsood/Desktop/Work Area/RoomProblem/RoomProblem/bin/Debug/net6.0/RoomProblem.dll
+/Users/vanshsood/Desktop/Work Area/RoomProblem/RoomProblem/bin/Debug/net6.0/RoomProblem.pdb
+/Users/vanshsood/Desktop/Work Area/RoomProblem/RoomProblem/obj/Debug/net6.0/RoomProblem.csproj.AssemblyReference.cache
+/Users/vanshsood/Desktop/Work Area/RoomProblem/RoomProblem/obj/Debug/net6.0/RoomProblem.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vanshsood/Desktop/Work Area/RoomProblem/RoomProblem/obj/Debug/net6.0/RoomProblem.AssemblyInfoInputs.cache
+/Users/vanshsood/Desktop/Work Area/RoomProblem/RoomProblem/obj/Debug/net6.0/RoomProblem.AssemblyInfo.cs
+/Users/vanshsood/Desktop/Work Area/RoomProblem/RoomProblem/obj/Debug/net6.0/RoomProblem.csproj.CoreCompileInputs.cache
+/Users/vanshsood/Desktop/Work Area/RoomProblem/RoomProblem/obj/Debug/net6.0/RoomProblem.dll
+/Users/vanshsood/Desktop/Work Area/RoomProblem/RoomProblem/obj/Debug/net6.0/refint/RoomProblem.dll
+/Users/vanshsood/Desktop/Work Area/RoomProblem/RoomProblem/obj/Debug/net6.0/RoomProblem.pdb
+/Users/vanshsood/Desktop/Work Area/RoomProblem/RoomProblem/obj/Debug/net6.0/RoomProblem.genruntimeconfig.cache
+/Users/vanshsood/Desktop/Work Area/RoomProblem/RoomProblem/obj/Debug/net6.0/ref/RoomProblem.dll

@@ -19,13 +19,11 @@ namespace RoomProblem
 
         public int NumberActions => 6;
 
-        public double GetReward(int currentState, int action)
-        {
+        public double GetReward(int currentState, int action) {
             return rewardMatrix[currentState][action];
         }
 
-        public int[] GetActions(int currentState)
-        {
+        public int[] GetActions(int currentState) {
             List<int> validActions = new List<int>();
             for (int i = 0; i < rewardMatrix[currentState].Length; i++)
             {
@@ -35,8 +33,7 @@ namespace RoomProblem
             return validActions.ToArray();
         }
 
-        public bool IsStateReached(int currentState)
-        {
+        public bool IsStateReached(int currentState) {
             return currentState == 5;
         }
     }

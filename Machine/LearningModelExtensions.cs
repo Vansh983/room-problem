@@ -7,7 +7,7 @@ namespace RoomProblem.Machine
     {
         public static double[][] NormalizeMatrix(this double[][] matrix)
         {
-            var maxElement = matrix.GetMaxElement();
+            var max = matrix.GetMax();
 
             var normalizedMatrix = new double[matrix.Length][];
             for (int i = 0; i < matrix.Length; i++)
@@ -16,24 +16,24 @@ namespace RoomProblem.Machine
                 for (int j = 0; j < matrix[i].Length; j++)
                 {
                     if (matrix[i][j] != 0)
-                        normalizedMatrix[i][j] = Math.Round((matrix[i][j] * 100) / maxElement, 0);
+                        normalizedMatrix[i][j] = Math.Round((matrix[i][j] * 100) / max, 0);
                 }
             }
             return normalizedMatrix;
         }
 
-        public static double GetMaxElement(this double[][] matrix)
+        public static double GetMax(this double[][] matrix)
         {
-            double maxElement = 0;
+            double max = 0;
             for (int i = 0; i < matrix.Length; i++)
             {
                 for (int j = 0; j < matrix[i].Length; j++)
                 {
-                    if (matrix[i][j] > maxElement)
-                        maxElement = matrix[i][j];
+                    if (matrix[i][j] > max)
+                        max = matrix[i][j];
                 }
             }
-            return maxElement;
+            return max;
         }
 
         public static string Print(this double[][] matrix)

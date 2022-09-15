@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using RoomProblem.Machine;
 
-namespace QLearningApp.MachineLearning
+namespace RoomProblem.Machine
 {
-    public class QLearning
+    public class LearningModel
     {
         private Random _random = new Random();
         private double _energy;
@@ -14,9 +14,9 @@ namespace QLearningApp.MachineLearning
         private double[][] _qTable;
         public double[][] QTable { get => _qTable; }
 
-        private LearninngModelInterface _qLearningProblem;
+        private LearningModelInterface _qLearningProblem;
 
-        public QLearning(double energy, LearninngModelInterface qLearningProblem)
+        public LearningModel(double energy, LearningModelInterface qLearningProblem)
         {
             _qLearningProblem = qLearningProblem;
             _energy = energy;
@@ -34,10 +34,29 @@ namespace QLearningApp.MachineLearning
             }
         }
 
-        //public LearningOut Run(int initialState)
-        //{
-           
-        //}
+        public ModelStats Run(int initialState)
+        {
+            if (initialState < 0 || initialState > _qLearningProblem.NumberStates) throw new ArgumentException($"Only 0-5 allowed for start [0-{_qLearningProblem.NumberStates}", nameof(initialState));
+
+            var result = new ModelStats();
+            result.InitialState = initialState;
+            int state = initialState;
+            List<int> actions = new List<int>();
+            while (true)
+            {
+                result.StepCount += 1;
+                int action = _qTable[state].ToList().IndexOf(_qTable[state].Max());
+                state = action;
+                actions.Add(action);
+                if (_qLearningProblem.IsStateReached(action))
+                {
+                    result.Final = action;
+                    break;
+                }
+            }
+            result.Steps = actions.ToArray();
+            return result;
+        }
 
         private void StartingSome(int initialState)
         {
