@@ -1,19 +1,16 @@
 ﻿using RoomProblem.Machine;
 using System.Collections.Generic;
 
-namespace RoomProblem
-{
-    class RoomsProblem : LearningModelInterface
-    {
-        private double[][] rewardMatrix = new double[6][]
-            {
+namespace RoomProblem {
+    class RoomsProblem : LearningModelInterface {
+        private double[][] rewardMatrix = new double[6][] {
                 new double[]{-1, -1, -1, -1,  0, -1 },
                 new double[]{-1, -1, -1,  0, -1, 100},
                 new double[]{-1, -1, -1,  0, -1, -1},
                 new double[]{-1,  0,  0, -1,  0, -1},
                 new double[]{ 0, -1, -1,  0, -1, -1},
                 new double[]{-1,  0, -1, -1, -1, -1}
-            };
+        };
 
         public int NumberStates => 6;
 
@@ -25,8 +22,7 @@ namespace RoomProblem
 
         public int[] GetActions(int currentState) {
             List<int> validActions = new List<int>();
-            for (int i = 0; i < rewardMatrix[currentState].Length; i++)
-            {
+            for (int i = 0; i < rewardMatrix[currentState].Length; i++) {
                 if (rewardMatrix[currentState][i] != -1)
                     validActions.Add(i);
             }

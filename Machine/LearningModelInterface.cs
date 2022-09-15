@@ -1,7 +1,5 @@
-﻿namespace RoomProblem.Machine
-{
-    public interface LearningModelInterface
-    {
+﻿namespace RoomProblem.Machine {
+    public interface LearningModelInterface {
         int NumberStates { get; }
         int NumberActions { get; }
         int[] GetActions(int currentState);
